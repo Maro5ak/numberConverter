@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1f1f1f"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/header"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/spsoa"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#E1E1E1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView0"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1">
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/first_name"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColor="#E1E1E1"
+            android:textColorHint="#E1E1E1"
+            android:textSize="14sp"
+            android:typeface="sans" />
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/last_name"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColor="#E1E1E1"
+            android:textColorHint="#E1E1E1"
+            android:textSize="14sp"
+            android:typeface="sans" />
+
+        <EditText
+            android:id="@+id/schoolClass"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/school_class"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColor="#E1E1E1"
+            android:textColorHint="#E1E1E1"
+            android:textSize="14sp"
+            android:typeface="sans" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="129dp"
+        android:layout_height="67dp"
+        android:backgroundTint="#014701"
+        android:fontFamily="sans-serif"
+        android:onClick="startTimer"
+        android:text="@string/buttonStart"
+        android:textColor="#E1E1E1"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow2"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <Chronometer
+        android:id="@+id/timer"
+        android:layout_width="153dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:textColor="#E1E1E1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
+
+    <ScrollView
+        android:layout_width="359dp"
+        android:layout_height="280dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.696">
+
+        <TableLayout
+            android:id="@+id/scrollTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/binary"
+                    android:textColor="#E1E1E1"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/task0"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/task"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result0_0"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result1_0"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/task1"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/task"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result0_1"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result1_1"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/task2"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/task"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result0_2"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result1_2"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/task3"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/task"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result0_3"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result1_3"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/hex"
+                    android:textColor="#E1E1E1"
+                    android:textSize="18sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/task4"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/task"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result0_4"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result1_4"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/task5"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/task"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result0_5"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result1_5"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/task6"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/task"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result0_6"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result1_6"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/task7"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/task"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result0_7"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result1_7"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/decimal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="18sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/task8"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/task"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result0_8"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result1_8"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/task9"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/task"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result0_9"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result1_9"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/task10"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/task"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result0_10"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result1_10"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/task11"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/task"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result0_11"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/symbol_equal"
+                    android:textColor="#E1E1E1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/result1_11"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/result"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColor="#E1E1E1"
+                    android:textColorHint="#E1E1E1"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </TableRow>
+
+
+        </TableLayout>
+    </ScrollView>
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="360dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="88dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/pointsLabel"
+            android:layout_width="61dp"
+            android:layout_height="wrap_content"
+            android:text="@string/points"
+            android:textAlignment="textEnd"
+            android:textColor="#E1E1E1"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="61dp"
+            android:layout_height="52dp" />
+
+        <TextView
+            android:id="@+id/markLabel"
+            android:layout_width="61dp"
+            android:layout_height="wrap_content"
+            android:text="@string/mark"
+            android:textAlignment="textEnd"
+            android:textColor="#E1E1E1"
+            android:textSize="20sp" />
+    </TableRow>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

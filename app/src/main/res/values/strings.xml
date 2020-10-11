@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">convertNumber</string>
+    <string name="header">NUMBER CONVERTER APP</string>
+    <string name="spsoa">SPS a OA, Bruntál</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="school_class">Class</string>
+    <string name="buttonStart">start</string>
+    <string name="task">Task</string>
+    <string name="symbol_equal">=</string>
+    <string name="result">Result</string>
+    <string name="hex">Hex</string>
+    <string name="points">Points</string>
+    <string name="mark">Mark</string>
+    <string name="binary">Binary</string>
+    <string name="decimal">Decimal</string>
+    <string name="buttonStop">stop</string>
+</resources>
