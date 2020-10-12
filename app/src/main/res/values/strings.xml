@@ -9,10 +9,10 @@
     <string name="task">Task</string>
     <string name="symbol_equal">=</string>
     <string name="result">Result</string>
-    <string name="hex">Hex</string>
-    <string name="points">Points</string>
+    <string name="hex">Hexadecimal -> Decimal -> Binary</string>
+    <string name="points">Corr</string>
     <string name="mark">Mark</string>
-    <string name="binary">Binary</string>
-    <string name="decimal">Decimal</string>
+    <string name="binary">Binary -> Hexadecimal -> Decimal</string>
+    <string name="decimal">Decimal -> Hexadecimal -> Binary</string>
     <string name="buttonStop">stop</string>
 </resources>
